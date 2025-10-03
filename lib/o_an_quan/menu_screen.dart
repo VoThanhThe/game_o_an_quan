@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:vibration/vibration.dart';
 
 import 'difficulty_screen.dart';
 import 'how_to_play_screen.dart';
 import 'leader_board.dart';
 import 'play_game_1vs1.dart';
 import 'service/audio_service.dart';
-import 'settings_screen.dart';
 
 class MenuScreen extends StatefulWidget {
   const MenuScreen({super.key});

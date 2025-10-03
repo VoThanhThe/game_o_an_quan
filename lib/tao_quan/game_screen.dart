@@ -7,6 +7,7 @@ class TaoQuanGame extends StatefulWidget {
   const TaoQuanGame({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _TaoQuanGameState createState() => _TaoQuanGameState();
 }
 
@@ -261,7 +262,7 @@ class _TaoQuanGameState extends State<TaoQuanGame> with TickerProviderStateMixin
             width: 80,
             height: 50,
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.8),
+              color: Colors.white.withAlpha((0.8 * 255).toInt()),
               borderRadius: BorderRadius.circular(25),
             ),
           ),
@@ -455,7 +456,7 @@ class _TaoQuanGameState extends State<TaoQuanGame> with TickerProviderStateMixin
 
   Widget _buildStartScreen() {
     return Container(
-      color: Colors.black.withOpacity(0.7),
+      color: Colors.black.withAlpha((0.7 * 255).toInt()),
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -515,7 +516,7 @@ class _TaoQuanGameState extends State<TaoQuanGame> with TickerProviderStateMixin
 
   Widget _buildGameOverScreen() {
     return Container(
-      color: Colors.black.withOpacity(0.8),
+      color: Colors.black.withAlpha((0.8 * 255).toInt()),
       child: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -585,7 +586,7 @@ class _TaoQuanGameState extends State<TaoQuanGame> with TickerProviderStateMixin
       child: Container(
         padding: EdgeInsets.all(15),
         decoration: BoxDecoration(
-          color: Colors.red[600]?.withOpacity(0.9),
+          color: Colors.red[600]?.withAlpha((0.9 * 255).toInt()),
           borderRadius: BorderRadius.circular(15),
           border: Border.all(color: Colors.yellow[400]!, width: 2),
         ),
@@ -651,7 +652,7 @@ class WavePainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final paint = Paint()
-      ..color = Colors.blue[200]!.withOpacity(0.3)
+      ..color = Colors.blue[200]!.withAlpha((0.3 * 255).toInt())
       ..strokeWidth = 2
       ..style = PaintingStyle.stroke;
 

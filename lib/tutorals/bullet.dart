@@ -53,7 +53,7 @@ class Bullet extends SpriteAnimationComponent
   ) {
     super.onCollisionStart(intersectionPoints, other);
     if (other is Enemy) {
-      print("💥 Bullet hit Enemy!");
+      debugPrint("💥 Bullet hit Enemy!");
       other.removeFromParent();
       removeFromParent();
     }

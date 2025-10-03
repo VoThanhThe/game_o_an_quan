@@ -63,7 +63,7 @@ class AudioService with WidgetsBindingObserver {
       await _bgPlayer.play();
       _isBackgroundPlaying = true;
     } catch (e) {
-      print("Lỗi phát nhạc nền: $e");
+      debugPrint("Lỗi phát nhạc nền: $e");
     }
   }
 
@@ -93,7 +93,7 @@ class AudioService with WidgetsBindingObserver {
       await _menuPlayer.play();
       _isMenuPlaying = true;
     } catch (e) {
-      print("Lỗi phát nhạc menu: $e");
+      debugPrint("Lỗi phát nhạc menu: $e");
     }
   }
 
@@ -117,8 +117,9 @@ class AudioService with WidgetsBindingObserver {
   Future<void> playEffect(SoundType type) async {
     if (!_soundEnabled ||
         type == SoundType.background ||
-        type == SoundType.menu)
+        type == SoundType.menu) {
       return;
+    }
     try {
       final player = AudioPlayer();
       await player.setAsset(_sounds[type]!);
@@ -129,7 +130,7 @@ class AudioService with WidgetsBindingObserver {
         }
       });
     } catch (e) {
-      print("Lỗi phát hiệu ứng: $e");
+      debugPrint("Lỗi phát hiệu ứng: $e");
     }
   }
 

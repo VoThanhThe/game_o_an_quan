@@ -56,7 +56,7 @@ class Enemy extends SpriteAnimationComponent
     super.onCollisionStart(intersectionPoints, other);
 
     if (other is Bullet) {
-      print("💀 Enemy bị bắn hạ!");
+      debugPrint("💀 Enemy bị bắn hạ!");
       removeFromParent();
       other.removeFromParent();
     }

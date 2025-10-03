@@ -1009,6 +1009,7 @@ class _PlayGameAiState extends State<PlayGameAi>
     if (bestValue <= originalAlpha) {
       flag = TTFlag.upperBound;
     } else if (bestValue >= beta)
+      // ignore: curly_braces_in_flow_control_structures
       flag = TTFlag.lowerBound;
 
     _transpositionTable[stateKey] = TranspositionEntry(

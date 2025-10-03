@@ -41,12 +41,12 @@ class OQuan extends StatelessWidget {
         border: Border.all(color: const Color(0xFFB45309), width: 3),
         boxShadow: [
           BoxShadow(
-            color: Colors.amber.withOpacity(0.4),
+            color: Colors.amber.withAlpha((0.4 * 255).toInt()),
             blurRadius: 8,
             spreadRadius: 2,
           ),
           BoxShadow(
-            color: Colors.black.withOpacity(0.2),
+            color: Colors.black.withAlpha((0.2 * 255).toInt()),
             blurRadius: 4,
             offset: const Offset(0, 2),
           ),
@@ -73,7 +73,7 @@ class OQuan extends StatelessWidget {
                       vertical: 2,
                     ),
                     decoration: BoxDecoration(
-                      color: Colors.black.withOpacity(0.3),
+                      color: Colors.black.withAlpha((0.3 * 255).toInt()),
                       borderRadius: BorderRadius.circular(8),
                     ),
                     child: Text(
@@ -94,7 +94,7 @@ class OQuan extends StatelessWidget {
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(20),
                 border: Border.all(
-                  color: Colors.white.withOpacity(0.8),
+                  color: Colors.white.withAlpha((0.8 * 255).toInt()),
                   width: 4,
                 ),
               ),
